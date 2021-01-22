@@ -53,18 +53,18 @@ destroy(error)
 destroy(message)
 end on
 
-event open;////
-// Profile PB Demo DB V2019R3
-SQLCA.DBMS = "ODBC"
-SQLCA.AutoCommit = False
-SQLCA.DBParm = "ConnectString='DSN=PB Demo DB V2019R3;UID=dba;PWD=sql'"
-Connect;
-
-If SQLCA.sqlcode <> 0 Then
-	MessageBox ("Sorry! Cannot Connect To Database", SQLCA.sqlerrtext)
-	Halt Close
-	Return
-End If
+event open;//////
+//// Profile PB Demo DB V2019R3
+//SQLCA.DBMS = "ODBC"
+//SQLCA.AutoCommit = False
+//SQLCA.DBParm = "ConnectString='DSN=PB Demo DB V2019R3;UID=dba;PWD=sql'"
+//Connect;
+//
+//If SQLCA.sqlcode <> 0 Then
+//	MessageBox ("Sorry! Cannot Connect To Database", SQLCA.sqlerrtext)
+//	Halt Close
+//	Return
+//End If
 
 String ls_theme
 
