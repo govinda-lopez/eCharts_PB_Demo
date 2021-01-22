@@ -17,9 +17,9 @@ end type
 global w_child_base w_child_base
 
 type variables
-eon_appeon_resize  ieon_resize
+eon_appeon_resize  	ieon_resize
+nvo_RESTClient		inv_RESTClient
 end variables
-
 event ue_setflag();//====================================================================
 // 
 //   event name : ue_setflag
@@ -67,6 +67,14 @@ ieon_resize.of_fontresize(true,3)
 ieon_resize.of_zoom( true, 3)
 
 event ue_setflag()
+
+// Instantiate the RESTClient object
+inv_RESTClient	= CREATE nvo_RESTClient
+
+// Set the Request Headers for the RESTClient object
+inv_RESTClient.SetRequestHeader("Content-type", "Application/json")
+inv_RESTClient.SetRequestHeader("Accept-encoding", "gzip")
+
 end event
 
 event close;//
