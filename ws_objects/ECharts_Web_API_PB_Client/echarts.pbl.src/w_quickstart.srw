@@ -27,10 +27,9 @@ end type
 global w_quickstart w_quickstart
 
 type variables
-
+NVO_RESTCLIENT inv_RESTClient
 
 end variables
-
 on w_quickstart.create
 int iCurrent
 call super::create
