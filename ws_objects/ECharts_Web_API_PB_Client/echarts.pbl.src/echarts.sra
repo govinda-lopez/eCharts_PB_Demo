@@ -11,8 +11,9 @@ global message message
 end forward
 
 global variables
-String gs_themename, gs_EChartsTheme
-String gs_GraphType = "line"
+String 	gs_themename, gs_EChartsTheme
+String 	gs_GraphType = "line"
+STRING	gs_host_url
 end variables
 
 global type echarts from application
@@ -82,6 +83,10 @@ Choose Case gs_themeName
 		gs_EChartsTheme = 'default'
 	Case Else
 End Choose
+
+// Get the URL of the Host
+gs_host_url	= "http://" + ProfileString("echarts.ini", "Setup", "CloudHost", "localhost:16561") + "/api/v1/"
+
 
 
 Open(w_mdi)
