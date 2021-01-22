@@ -115,5 +115,7 @@ fontcharset fontcharset = ansi!
 fontpitch fontpitch = variable!
 fontfamily fontfamily = swiss!
 string facename = "Segoe UI"
+boolean init_hscrollbar = true
+boolean init_vscrollbar = true
 end type
 
