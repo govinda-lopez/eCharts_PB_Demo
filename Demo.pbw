@@ -1,0 +1,8 @@
+Save Format v3.0(19990112)
+@begin Targets
+ 0 "ECharts\\echarts.pbt";
+ 1 "ECharts_Web_API_PB_Client\\echarts_Web_API.pbt";
+@end;
+DefaultTarget "ECharts_Web_API_PB_Client\\echarts_Web_API.pbt";
+DefaultExportEncode "UTF-8";
+DefaultRemoteTarget "ECharts_Web_API_PB_Client\\echarts_Web_API.pbt";
