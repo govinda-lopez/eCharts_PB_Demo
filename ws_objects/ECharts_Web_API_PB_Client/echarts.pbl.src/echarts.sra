@@ -85,7 +85,7 @@ Choose Case gs_themeName
 End Choose
 
 // Get the URL of the Host
-gs_host_url	= "http://" + ProfileString("echarts.ini", "Setup", "CloudHost", "localhost:16561") + "/api/v1/"
+gs_host_url	= "http://" + ProfileString("C:\PB_Workspaces\Demo\ECharts_Web_API_PB_Client\echarts.ini", "CloudHost", "datastoredefaulturl", "localhost:16561") + "/api/v1/"
 
 
 
