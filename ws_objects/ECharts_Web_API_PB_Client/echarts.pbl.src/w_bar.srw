@@ -361,9 +361,9 @@ dw_1.height = wb_1.height
 dw_2.y = wb_2.y
 dw_2.height = wb_2.height
 
-dw_1.SetTransObject (SQLCA)
-dw_1.Retrieve()
-
+//dw_1.SetTransObject (SQLCA)
+//dw_1.Retrieve()
+inv_RESTClient.Retrieve(dw_1, gs_host_url + "D_Bar_Headcount/Retrieve")
 
 ib_flag = True
 ll_SeriesCount = dw_1.SeriesCount( "gr_1")
@@ -389,7 +389,7 @@ ls_dept = dw_1.CategoryName ("gr_1", 1)
 
 dw_2.Modify (ls_grgraphname + ".title=" + &
 "'Employees in " + ls_dept + " Department ' ")
-dw_2.SetTransObject(sqlca)
+//dw_2.SetTransObject(sqlca)
 
 //1.waiting webbrowser init
 //2.Navigation DefaultUrl
@@ -426,8 +426,9 @@ ls_CategoryName = dw_1.CategoryName("gr_1", ll_Name + 1)
 dw_3.Modify (ls_grgraphname + ".title=" + &
 "'Employees in " + ls_CategoryName + " Department ' ")
 
-dw_3.SetTransObject(sqlca)
-dw_3.Retrieve(ls_CategoryName)
+//dw_3.SetTransObject(sqlca)
+//dw_3.Retrieve(ls_CategoryName)
+inv_RESTClient.Retrieve(dw_3, gs_host_url + "D_Bar_Employees/Retrieve/" + ls_CategoryName)
 
 ls_test = ls_CategoryName
 
@@ -530,8 +531,9 @@ If ClickedObject = TypeData!  or &
 		ls_dept = this.CategoryName (ls_grgraphname, li_category)
 		dw_2.Modify (ls_grgraphname + ".title=" + &
 				"'Employees in " + ls_dept + " Department ' ")
-		dw_2.SetTransObject(sqlca)
-		dw_2.Retrieve (ls_dept)
+//		dw_2.SetTransObject(sqlca)
+//		dw_2.Retrieve (ls_dept)
+		inv_RESTClient.Retrieve(dw_2, gs_host_url + "D_Bar_Employees/Retrieve/" + ls_dept)
 		
 End If
 
