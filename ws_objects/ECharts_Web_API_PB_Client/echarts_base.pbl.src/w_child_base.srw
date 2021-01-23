@@ -20,6 +20,7 @@ type variables
 eon_appeon_resize  	ieon_resize
 nvo_RESTClient		inv_RESTClient
 end variables
+
 event ue_setflag();//====================================================================
 // 
 //   event name : ue_setflag
@@ -79,5 +80,7 @@ end event
 
 event close;//
 destroy ieon_resize
+
+destroy inv_RESTClient
 end event
 
