@@ -223,8 +223,9 @@ destroy(this.st_2)
 end on
 
 event open;call super::open;/*Initialize and show dw_1*/
-dw_1.SetTransObject(sqlca)
-dw_1.Retrieve()
+//dw_1.SetTransObject(sqlca)
+//dw_1.Retrieve()
+inv_RESTClient.Retrieve(dw_1, gs_host_url + "D_Funnel/Retrieve")
 ib_flag = TRUE
 
 //1.waiting webbrowser init
