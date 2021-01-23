@@ -155,8 +155,9 @@ event open;call super::open;String ls_Category, ls_SeriesName, ls_SeriesName2
 Long ll_SeriesCount, ll_Row, ll_Row2, ll_i, ll_j, ll_DataCount, ldb_Value
 
 
-dw_1.SetTransObject(SQLCA)
-dw_1.Retrieve()
+//dw_1.SetTransObject(SQLCA)
+//dw_1.Retrieve()
+inv_RESTClient.Retrieve(dw_1, gs_host_url + "D_Dept_Empidcount_Pie/Retrieve")
 
 
 ib_flag = TRUE
