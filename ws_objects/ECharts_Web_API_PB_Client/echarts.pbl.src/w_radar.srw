@@ -150,8 +150,9 @@ wb_1.of_Apply()
 
 end subroutine
 
-event open;call super::open;dw_1.SetTransObject(sqlca)
-dw_1.Retrieve( )
+event open;call super::open;//dw_1.SetTransObject(sqlca)
+//dw_1.Retrieve( )
+inv_RESTClient.Retrieve(dw_1, gs_host_url + "D_Radar/Retrieve")
 
 //Data obtained after Retrieve, start to read the file file:///echarts.html
 //Then initialize wb_1, and execute wb_1 event navigationchanged() after the initialization
