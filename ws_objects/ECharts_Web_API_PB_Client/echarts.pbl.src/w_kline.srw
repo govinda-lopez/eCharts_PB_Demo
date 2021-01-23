@@ -240,8 +240,9 @@ destroy(this.st_2)
 end on
 
 event open;call super::open;
-dw_1.SetTransObject(sqlca)
-dw_1.Retrieve()
+//dw_1.SetTransObject(sqlca)
+//dw_1.Retrieve()
+inv_RESTClient.Retrieve(dw_1, gs_host_url + "D_Kline/Retrieve")
 
 //1.waiting webbrowser init
 //2.Navigation DefaultUrl
