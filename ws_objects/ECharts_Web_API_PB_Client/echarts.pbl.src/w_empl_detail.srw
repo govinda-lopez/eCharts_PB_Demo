@@ -43,8 +43,9 @@ String ls_lastName, ls_FirstName
 
 ll_id = Message.DoubleParm
 
-dw_empl.SetTransObject(sqlca)
-dw_empl.Retrieve(ll_id)
+//dw_empl.SetTransObject(sqlca)
+//dw_empl.Retrieve(ll_id)
+inv_RESTClient.Retrieve(dw_empl, gs_host_url + "D_Empl_F_Arg/Retrieve/" + STRING(ll_id))
 
 If dw_empl.RowCount() > 0 Then
 	ls_lastName = dw_empl.GetItemString(1, "emp_lname")
