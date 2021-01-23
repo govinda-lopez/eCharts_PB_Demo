@@ -149,8 +149,9 @@ Double ldb_Value
 dw_1.y = wb_1.y
 dw_2.height = wb_1.height/2
 
-dw_1.SetTransObject (SQLCA)
-dw_1.Retrieve()
+//dw_1.SetTransObject (SQLCA)
+//dw_1.Retrieve()
+inv_RESTClient.Retrieve(dw_1, gs_host_url + "D_Dept_Headcount_Line/Retrieve")
 
 ib_init = True
 ib_flag = TRUE
