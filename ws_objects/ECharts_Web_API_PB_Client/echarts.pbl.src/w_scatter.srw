@@ -325,8 +325,9 @@ Return ls_Option
 end function
 
 event open;call super::open;
-dw_1.SetTransObject( sqlca)
-dw_1.Retrieve()
+//dw_1.SetTransObject( sqlca)
+//dw_1.Retrieve()
+inv_RESTClient.Retrieve(dw_1, gs_host_url + "D_Scatter/Retrieve")
 
 ib_flag = True
 
