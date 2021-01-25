@@ -67,7 +67,7 @@ JsonParser lnv_JsonParser
 
 ls_Json = Message.StringParm
 
-dw_tables.SetTransObject(sqlca)
+//dw_tables.SetTransObject(sqlca)
 IF f_set_table_select(dw_tables) <0 THEN
 	Messagebox("Error", &
 					"Unable to set SQL select statement for tables list", &
@@ -75,7 +75,8 @@ IF f_set_table_select(dw_tables) <0 THEN
 	this.Triggerevent( Close! )
 END IF
 
-ll_ret  = dw_tables.Retrieve( )
+//ll_ret  = dw_tables.Retrieve( )
+ll_ret  = inv_RESTClient.retrieve(dw_tables, gs_host_url + "D_Table_List/Retrieve")
 IF ll_ret < 1 THEN
 	Messagebox("Retrieve renturn code is:", ll_ret)
 END IF
